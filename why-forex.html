@@ -4,95 +4,233 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forex Mentorship Program - Why Forex?</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap 5 CSS Framework -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Font for clean modern interface text -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Crisp, light off-white background */
+            color: #1e293b; /* Dark slate text for high legibility */
+        }
+        .hero-title {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-custom {
+            background-color: #ffffff; /* Clean white cards */
+            border: 1px solid #e2e8f0; /* Soft light border */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+        .card-custom:hover {
+            transform: translateY(-4px);
+            border-color: #3b82f6;
+            box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.1);
+        }
+        .legal-notice {
+            background-color: #fef2f2; /* Light amber/red notice container */
+            border-left: 4px solid #ef4444;
+        }
+        .footer {
+            background-color: #ffffff;
+            border-top: 1px solid #e2e8f0;
+        }
+    </style>
 </head>
-<body>
-    <!-- Shared Navigation Bar -->
-    <header>
-        <nav>
-            <div class="logo">Forex Mentorship</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="why-forex.html" class="active">Why Forex?</a></li>
-                <li><a href="mentorship-program.html">Mentorship Program</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="d-flex flex-column min-vh-100">
 
-    <!-- Page Content -->
-    <main>
-        <article class="forex-guide">
-            <section class="intro-section">
-                <h2>What is Forex?</h2>
-                <p><strong>Forex</strong> is buying and selling foreign currencies (Foreign Exchange). Any form of currency conversion that happens is part of the Forex Market, for example, conversions during import/export, OTC (over the counter) transactions, travel, etc.</p>
-                <p>It’s a market where about <strong>10 trillion-dollar</strong> transactions happen every day, 30 times larger than the New York Stock Exchange (NYSE) and 900 times larger than the London Stock Exchange (LSE).</p>
-                <p>It’s a decentralized market. So, changes in the exchange rate happen due to many unanticipated factors.</p>
-            </section>
-
-            <section class="mechanics-section">
-                <h2>How does it work?</h2>
-                <p>Exchange happens based on currency pairs and the conversion rate of that pair. For example, <code>EURUSD</code> is a pair, and the rate today is 1.13. Which means if you convert 1 Euro you will get 1.13 USD.</p>
-                <p>This price is tracked at the fifth digit after the decimal point. At one point in the day, the rate might be 1.13245, and after 1 hour it may change to 1.13260. Which means EUR got 15 points stronger than USD. So, if you bought 100,000 EUR and sold after 1 hour, you would have made a profit of 15 EUR in 1 hour.</p>
-            </section>
-
-            <section class="trading-section">
-                <h2>How do I do Forex trading?</h2>
-                <p>Forex trading can be done online. You can open an account with a broker and deposit your capital. Then use an app like MetaTrader to place the buy/sell orders.</p>
-                <p>When you place an order, your deposited currency is converted to the base currency. For example, your deposited currency was USD. Then you place a buy order for 1,000 dollars for the <code>GBPJPY</code> pair (GBP is the base currency here). Your 1,000-dollar capital will be converted to an increased amount, for example, 100 times more than the actual. This is called <strong>“Leverage”</strong>.</p>
-                
-                <!-- Aside element used for technical explanations or callouts -->
-                <aside class="callout-box">
-                    <h3>Understanding Leverage</h3>
-                    <p>Leverage is offered by the broker. Leverage is a way of lending capital to the trader. A 1:100 Leverage means your capital of 1,000 dollars will have a buying power equivalent to 100,000 dollars (1000 x 100).</p>
-                    <p>Why do brokers offer Leverage? It’s because retail traders usually have very small capital to make any reasonable profit. For example, according to the earlier example (15 EUR profit from 100,000 EUR in 1 hour), you would make only 15 cents with a 1,000 dollar deposit. So, this is not very attractive. Because brokers offer Leverage, it feels appealing to people to trade.</p>
-                    <p>If you make a profit, the broker gets a commission. But if you lose, you lose your own capital. The broker doesn’t lose anything. Because they take a commission from every type of order, let it be a buy order or a sell order. Your trade will automatically stop when you run out of capital.</p>
-                </aside>
-
-                <p>So, coming back to how a trade is executed. Your capital will be leveraged and converted to equivalent GBP and held for a duration until you close the order or your account wipes out. If the price increases, then the trade will close with a profit. In case of a loss, the trade will close after a 1,000-dollar loss (if you have set a fixed stop) or until your account wipes out.</p>
-            </section>
-
-            <section class="career-section">
-                <h2>Why is Forex Trading such a great career option?</h2>
-                <p>Forex Trading is a great career option for multiple reasons:</p>
-                
-                <ul class="benefits-list">
-                    <li>
-                        <strong>Less capital needed:</strong> Less capital is needed to make a high profit. This is possible due to the “Leverage” offered by the broker.
+    <!-- 1. LIGHT-THEMED NAVBAR WITH DROPDOWN MENU -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand text-primary fw-bold" href="index.html">📈 Forex Mentorship</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0fw-semibold">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
-                    <li>
-                        <strong>Capital is optional (Prop Firms):</strong> There are funding companies who will provide a very good amount of capital for a very small fee. These are called Prop Firms. To obtain capital, you must first prove your trading skill by making a reasonable amount of profit (usually 10% to 15%) by participating in a challenge. The firm will provide you with a demo account with a balance, for example, 100K USD. You have to pay a small fee to participate in the challenge. The fee might be around 1K USD for 100K challenges. Once you pass the challenge, they will pay back the fee you paid to participate. So, it’s possible to build your trading career without substantial trading capital.
+                    <li class="nav-item">
+                        <a class="nav-link active text-primary" href="why-forex.html">Why Forex?</a>
                     </li>
-                    <li>
-                        <strong>Exponential Growth:</strong> A highly competent trader makes about 5% to 10% profit per month. Which is about 60% to 120% profit in a year. So, the capital usually grows double every year.
-                        <!-- Nested details context -->
-                        <ul class="comparison-sublist">
-                            <li>Generally, any business is considered profitable if it generates at least 30% profit in a year. A doubling profitable business is rare.</li>
-                            <li>An investment usually returns about 8% to 10% profit, for example, a Fixed Deposit in a bank.</li>
-                            <li>A job usually provides a 5% to 10% increase in salary every year.</li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mentorship-program.html">Mentorship Program</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="infoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Company
+                        </a>
+                        <ul class="dropdown-menu shadow" aria-labelledby="infoDropdown">
+                            <li><a class="dropdown-item" href="about.html">About Us</a></li>
+                            <li><a class="dropdown-item" href="contact.html">Contact Info</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item disabled text-muted" href="#">Student Portal (Coming Soon)</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <strong>Ultimate Freedom:</strong> Trading will give you the ultimate freedom. It will provide you with three types of freedom - money, time, and location. The financial growth it will provide you from the second or third year onward will be unmatched by any other career option. Once you achieve competency, you will need to trade for about 3 to 6 hours per day, 5 days a week. You take your own days off. There is no boss, no permission needed. You can trade from anywhere in the world; you just need a laptop with an internet connection.
-                    </li>
-                    <li>
-                        <strong>Fast Career Build-up:</strong> It takes about 1 to 2 years to start earning a decent amount of money (5K to 10K USD) to afford a good living standard almost anywhere in the world. This is very low compared to most other career options. To earn a handsome salary in any discipline, you have to get a bachelor’s degree (4 years) and 3 to 4 years of experience at least. So, to be a doctor or engineer, 7 to 8 years of time investment is needed to start a good earning. I would not say it’s easy to learn Forex trading. But, in my opinion, it’s a lot easier than any other job or business.
-                    </li>
                 </ul>
-            </section>
-            <section class="legal-section">
-                <h2>Is Forex Trading Legal in Bangladesh?</h2>
-                <p>Online Forex Trading in general sense is illegal in Bangladesh. Why is it so? Generally, to trade Forex one needs to deposit foreign currencies in a Broker account to use as his capital. Buying and depositing foreign currencies through an unauthorized channel is illegal in Bangladesh. Doing so directly impacts the country’s foreign reserve. This way money moves outward of the country, which is essentially a form of money laundering.</p>
-                <p>However, learning Forex for academic purposes or trading Forex without depositing foreign currencies to a Broker account is not illegal. It’s possible to trade without depositing foreign currencies into a Broker account. It’s possible through Prop Firms. To participate in a challenge, you don’t have to make any deposits. To pass the challenge you will trade in a demo account with virtual money. Once you pass the challenge you will receive the capital from the Prop Firm which will reside in your Prop Firm account. When you start making profits with that capital you will be eligible to get the profit as payouts. At this point you can get a residence visa in a country where Forex trading is legal. For example, some of such countries are UAE, Singapore etc. You will be able to afford the residence permit as you will be able to make sufficient profit from Forex trading. You will have the option of making periodic visits to that country or you may also stay there as long as you have the visa. Once you get the residence visa in that country you can then send money to Bangladesh as remittance. This way money will move inward and enrich foreign reserve of Bangladesh.</p>
-                <p>It is also generally recommended for a trader to verify his trading skills by participating in a Prop Firm challenge even if the trader resides in a country where Forex trading is legal. Because Prop Firms imposes some strict risk management rules which are essential to make consistent profit without risking the trader’s own capital. This way the trader won’t need his own capital at any time.</p>
-            </section>
-        </article>
-    </main>
+            </div>
+        </div>
+    </nav>		
 
-    <!-- Shared Footer -->
-    <footer>
-        <p>&copy; 2026 MySite. All rights reserved.</p>
+
+    <!-- 2. MAIN CONTENT AREA (LIGHT THEME) -->
+<main class="container my-5 py-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-9">
+            <article class="forex-guide">
+
+                <!-- PAGE HEADER TITLE SECTION -->
+                <div class="text-center mb-5">
+                  <h1 class="display-4 fw-bold text-dark mb-3">Understanding the <span class="text-primary">Forex Market</span></h1>
+                  <p class="lead text-muted mx-auto" style="max-width: 720px;">Discover the core mechanics of global currency exchange and evaluate how institutional trading models create unmatched career leverage.</p>
+                </div>
+
+                <!-- SECTION 1: WHAT IS FOREX? -->
+                <section class="intro-section mb-5">
+                    <h2 class="h3 fw-bold text-primary mb-3">What is Forex?</h2>
+                    <p class="text-secondary"><strong>Forex</strong> is buying and selling foreign currencies (Foreign Exchange). Any form of currency conversion that happens is part of the Forex Market, for example, conversions during import/export, OTC (over the counter) transactions, travel, etc.</p>
+                    
+                    <!-- Market Comparison Grid -->
+                    <div class="row g-4 my-3 text-center">
+                        <div class="col-md-4">
+                            <div class="p-4 rounded bg-white border border-light-subtle shadow-sm">
+                                <div class="display-6 fw-bold text-dark">$10T</div>
+                                <small class="text-muted text-uppercase tracking-wider fw-semibold">Traded Daily</small>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="p-4 rounded bg-white border border-light-subtle shadow-sm">
+                                <div class="display-6 fw-bold text-primary">30x</div>
+                                <small class="text-muted text-uppercase tracking-wider fw-semibold">Larger than NYSE</small>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="p-4 rounded bg-white border border-light-subtle shadow-sm">
+                                <div class="display-6 fw-bold text-info">900x</div>
+                                <small class="text-muted text-uppercase tracking-wider fw-semibold">Larger than LSE</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-secondary">It’s a market where about <strong>10 trillion-dollar</strong> transactions happen every day, 30 times larger than the New York Stock Exchange (NYSE) and 900 times larger than the London Stock Exchange (LSE).</p>
+                    <p class="text-secondary mb-0">It’s a decentralized market. So, changes in the exchange rate happen due to many unanticipated factors.</p>
+                </section>
+
+                <hr class="border-light-subtle my-5">
+
+                <!-- SECTION 2: HOW DOES IT WORK? -->
+                <section class="mechanics-section mb-5">
+                    <h2 class="h3 fw-bold text-primary mb-3">How does it work?</h2>
+                    <p class="text-secondary">Exchange happens based on currency pairs and the conversion rate of that pair. For example, <code class="bg-light px-2 py-1 rounded text-danger border border-light-subtle">EURUSD</code> is a pair, and the rate today is 1.13. Which means if you convert 1 Euro you will get 1.13 USD.</p>
+                    <p class="text-secondary mb-0">This price is tracked at the fifth digit after the decimal point. At one point in the day, the rate might be 1.13245, and after 1 hour it may change to 1.13260. Which means EUR got 15 points stronger than USD. So, if you bought 100,000 EUR and sold after 1 hour, you would have made a profit of 15 EUR in 1 hour.</p>
+                </section>
+
+                <hr class="border-light-subtle my-5">
+
+                <!-- SECTION 3: HOW DO I DO FOREX TRADING? -->
+                <section class="trading-section mb-5">
+                    <h2 class="h3 fw-bold text-primary mb-3">How do I do Forex trading?</h2>
+                    <p class="text-secondary">Forex trading can be done online. You can open an account with a broker and deposit your capital. Then use an app like MetaTrader to place the buy/sell orders.</p>
+                    <p class="text-secondary">When you place an order, your deposited currency is converted to the base currency. For example, your deposited currency was USD. Then you place a buy order for 1,000 dollars for the <code class="bg-light px-2 py-1 rounded text-danger border border-light-subtle">GBPJPY</code> pair (GBP is the base currency here). Your 1,000-dollar capital will be converted to an increased amount, for example, 100 times more than the actual. This is called <strong>“Leverage”</strong>.</p>
+                    
+                    <!-- Technical Aside Callout Panel -->
+                    <aside class="callout-box p-4 rounded-3 my-4 bg-light border-start border-primary border-4 shadow-sm">
+                        <h3 class="h5 fw-bold text-dark mb-2">💡 Understanding Leverage</h3>
+                        <p class="text-secondary small">Leverage is offered by the broker. Leverage is a way of lending capital to the trader. A 1:100 Leverage means your capital of 1,000 dollars will have a buying power equivalent to 100,000 dollars (1000 x 100).</p>
+                        <p class="text-secondary small">Why do brokers offer Leverage? It’s because retail traders usually have very small capital to make any reasonable profit. For example, according to the earlier example (15 EUR profit from 100,000 EUR in 1 hour), you would make only 15 cents with a 1,000 dollar deposit. So, this is not very attractive. Because brokers offer Leverage, it feels appealing to people to trade.</p>
+                        <p class="text-secondary small mb-0">If you make a profit, the broker gets a commission. But if you lose, you lose your own capital. The broker doesn’t lose anything. Because they take a commission from every type of order, let it be a buy order or a sell order. Your trade will automatically stop when you run out of capital.</p>
+                    </aside>
+
+                    <p class="text-secondary mb-0">So, coming back to how a trade is executed. Your capital will be leveraged and converted to equivalent GBP and held for a duration until you close the order or your account wipes out. If the price increases, then the trade will close with a profit. In case of a loss, the trade will close after a 1,000-dollar loss (if you have set a fixed stop) or until your account wipes out.</p>
+                </section>
+
+                <hr class="border-light-subtle my-5">
+
+                <!-- SECTION 4: BENEFITS & EXPONENTIAL CAREER GROWTH -->
+                <section class="career-section mb-5">
+                    <h2 class="h3 fw-bold text-primary mb-4 text-center">Why is Forex Trading such a great career option?</h2>
+                    <p class="text-secondary text-center mb-4">Forex Trading is a great career option for multiple reasons:</p>
+                    
+                    <div class="row g-4">
+                        <div class="col-12">
+                            <div class="p-4 rounded bg-white border border-light-subtle shadow-sm">
+                                <h4 class="h5 fw-bold text-dark mb-2">📉 Less capital needed</h4>
+                                <p class="text-secondary mb-0">Less capital is needed to make a high profit. This is possible due to the “Leverage” offered by the broker.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="p-4 rounded bg-white border border-light-subtle shadow-sm">
+                                <h4 class="h5 fw-bold text-dark mb-2">🏢 Capital is optional (Prop Firms)</h4>
+                                <p class="text-secondary">There are funding companies who will provide a very good amount of capital for a very small fee. These are called Prop Firms. To obtain capital, you must first prove your trading skill by making a reasonable amount of profit (usually 10% to 15%) by participating in a challenge. The firm will provide you with a demo account with a balance, for example, 100K USD.</p>
+                                <p class="text-secondary mb-0">You have to pay a small fee to participate in the challenge. The fee might be around 1K USD for 100K challenges. Once you pass the challenge, they will pay back the fee you paid to participate. So, it’s possible to build your trading career without substantial trading capital.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="p-4 rounded bg-white border border-light-subtle shadow-sm">
+                                <h4 class="h5 fw-bold text-dark mb-2">📈 Exponential Growth</h4>
+                                <p class="text-secondary">A highly competent trader makes about 5% to 10% profit per month. Which is about 60% to 120% profit in a year. So, the capital usually grows double every year.</p>
+                                <ul class="list-group list-group-flush mt-2">
+                                    <li class="list-group-item bg-transparent text-muted ps-0 border-light-subtle">• Generally, any business is considered profitable if it generates at least 30% profit in a year. A doubling profitable business is rare.</li>
+                                    <li class="list-group-item bg-transparent text-muted ps-0 border-light-subtle">• An investment usually returns about 8% to 10% profit, for example, a Fixed Deposit in a bank.</li>
+                                    <li class="list-group-item bg-transparent text-muted ps-0 border-light-subtle">• A job usually provides a 5% to 10% increase in salary every year.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="p-4 rounded bg-white border border-light-subtle shadow-sm">
+                                <h4 class="h5 fw-bold text-dark mb-2">🌍 Ultimate Freedom</h4>
+                                <p class="text-secondary">Trading will give you the ultimate freedom. It will provide you with three types of freedom - money, time, and location. The financial growth it will provide you from the second or third year onward will be unmatched by any other career option.</p>
+                                <p class="text-secondary mb-0">Once you achieve competency, you will need to trade for about 3 to 6 hours per day, 5 days a week. You take your own days off. There is no boss, no permission needed. You can trade from anywhere in the world; you just need a laptop with an internet connection.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="p-4 rounded bg-white border border-light-subtle shadow-sm">
+                                <h4 class="h5 fw-bold text-dark mb-2">⚡ Fast Career Build-up</h4>
+                                <p class="text-secondary">It takes about 1 to 2 years to start earning a decent amount of money (5K to 10K USD) to afford a good living standard almost anywhere in the world. This is very low compared to most other career options.</p>
+                                <p class="text-secondary mb-0">To earn a handsome salary in any discipline, you have to get a bachelor’s degree (4 years) and 3 to 4 years of experience at least. So, to be a doctor or engineer, 7 to 8 years of time investment is needed to start a good earning. I would not say it’s easy to learn Forex trading. But, in my opinion, it’s a lot easier than any other job or business.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="legal-section mb-4">
+                    <h2 class="h3 fw-bold text-danger mb-3">Is Forex Trading Legal in Bangladesh?</h2>
+                    <p class="text-secondary">Online Forex Trading in general sense is illegal in Bangladesh. Why is it so? Generally, to trade Forex one needs to deposit foreign currencies in a Broker account to use as his capital. Buying and depositing foreign currencies through an unauthorized channel is illegal in Bangladesh. Doing so directly impacts the country’s foreign reserve. This way money moves outward of the country, which is essentially a form of money laundering.</p>
+                    
+                    <div class="p-4 bg-white border border-light-subtle rounded-3 shadow-sm my-4">
+                        <h4 class="h5 fw-bold text-dark mb-2">The Compliant Alternative: Academic Study & Prop Environments</h4>
+                        <p class="text-secondary">However, learning Forex for academic purposes or trading Forex without depositing foreign currencies to a Broker account is not illegal. It’s possible to trade without depositing foreign currencies into a Broker account. It’s possible through Prop Firms. To participate in a challenge, you don’t have to make any deposits. To pass the challenge you will trade in a demo account with virtual money.</p>
+                        <p class="text-secondary">Once you pass the challenge you will receive the capital from the Prop Firm which will reside in your Prop Firm account. When you start making profits with that capital you will be eligible to get the profit as payouts.</p>
+                        <p class="text-secondary mb-0">At this point you can get a residence visa in a country where Forex trading is legal. For example, some of such countries are UAE, Singapore etc. You will be able to afford the residence permit as you will be able to make sufficient profit from Forex trading. You will have the option of making periodic visits to that country or you may also stay there as long as you have the visa. Once you get the residence visa in that country you can then send money to Bangladesh as remittance. This way money will move inward and enrich foreign reserve of Bangladesh.</p>
+                    </div>
+
+                    <div class="p-4 bg-primary bg-opacity-10 border-start border-primary border-4 rounded-3">
+                        <h4 class="h6 fw-bold text-primary text-uppercase mb-2">📌 Strategic Recommendation</h4>
+                        <p class="text-secondary mb-0">It is also generally recommended for a trader to verify his trading skills by participating in a Prop Firm challenge even if the trader resides in a country where Forex trading is legal. Because Prop Firms imposes some strict risk management rules which are essential to make consistent profit without risking the trader’s own capital. This way the trader won’t need his own capital at any time.</p>
+                    </div>
+                </section>
+
+            </article>
+        </div>
+    </div>
+</main>
+
+<!-- 3. FOOTER SECTION -->
+    <footer class="footer py-4 text-center mt-auto">
+        <div class="container">
+            <p class="text-muted small mb-0">&copy; 2026 MySite. All rights reserved.</p>
+        </div>
     </footer>
+
+    <!-- Include Bootstrap 5 JavaScript Bundle (Crucial for dropdown & toggle functionality) -->
+    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

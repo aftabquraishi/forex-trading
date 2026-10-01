@@ -4,35 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forex Mentorship Program - Home</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Include Bootstrap 5 CSS Framework -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Font for professional look -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+        .hero-section {
+            background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+            padding: 100px 0;
+            border-bottom: 1px solid #374151;
+        }
+        .navbar-brand {
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        .footer {
+            border-top: 1px solid #2d3748;
+            background-color: #f8fafc;
+        }
+    </style>
 </head>
 <body>
-    <!-- Shared Navigation Bar -->
-    <header>
-        <nav>
-            <div class="logo">Forex Mentorship</div>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="why-forex.html">Why Forex?</a></li>
-                <li><a href="mentorship-program.html">Mentorship Program</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+
+    <!-- 1. LIGHT-THEMED NAVBAR WITH DROPDOWN MENU -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand text-primary fw-bold" href="index.html">📈 Forex Mentorship</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0fw-semibold">
+                    <li class="nav-item">
+                        <a class="nav-link active text-primary" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="why-forex.html">Why Forex?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mentorship-program.html">Mentorship Program</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="infoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Company
+                        </a>
+                        <ul class="dropdown-menu shadow" aria-labelledby="infoDropdown">
+                            <li><a class="dropdown-item" href="about.html">About Us</a></li>
+                            <li><a class="dropdown-item" href="contact.html">Contact Info</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item disabled text-muted" href="#">Student Portal (Coming Soon)</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. BOOTSTRAP HERO SECTION (LIGHT THEME) -->
+    <header class="hero-section py-5 text-center text-lg-start" style="background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%); border-bottom: 1px solid #cbd5e1;">
+        <div class="container py-4">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7">
+                    <span class="badge bg-primary px-3 py-2 rounded-pill mb-3">Accelerate Your Trading Journey</span>
+                    <h1 class="display-4 fw-bold text-dark mb-3">Welcome to Forex Mentorship</h1>
+                    <p class="lead text-muted mb-4">This is a simple, clean, and responsive 5-page website built from scratch. Master market mechanics, minimize risk, and build a consistent trading framework under professional guidance.</p>
+                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-lg-start">
+                        <a href="contact.html" class="btn btn-primary btn-lg px-4 me-sm-3 shadow-sm">Get in Touch</a>
+                        <a href="mentorship.html" class="btn btn-outline-primary btn-lg px-4">View Program</a>
+                    </div>
+                </div>
+                <div class="col-lg-5 text-center">
+                    <!-- Modernized light container dashboard panel -->
+                    <div class="bg-white p-5 rounded-4 border border-light-subtle shadow">
+                        <div class="display-1 text-primary mb-3">📊</div>
+                        <h3 class="h4 text-dark fw-bold">Live Market Insights</h3>
+                        <p class="text-muted small mb-0">Learn to navigate volatile currencies with structured risk management models.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <!-- Page Content -->
-    <main>
-        <section class="hero">
-            <h1>Welcome to Forex Mentorship</h1>
-            <p>This is a simple, clean, and responsive 5-page website built from scratch.</p>
-            <a href="contact.html" class="btn">Get in Touch</a>
-        </section>
-    </main>
-
-    <!-- Shared Footer -->
-    <footer>
-        <p>&copy; 2026 MySite. All rights reserved.</p>
+    <!-- 3. FOOTER SECTION -->
+    <footer class="footer py-4 text-center mt-auto">
+        <div class="container">
+            <p class="text-muted small mb-0">&copy; 2026 MySite. All rights reserved.</p>
+        </div>
     </footer>
+
+    <!-- Include Bootstrap 5 JavaScript Bundle (Crucial for dropdown & toggle functionality) -->
+    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -3,132 +3,256 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forex Mentorship Program - Mentorship Program</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Forex Mentorship Program - Why Forex?</title>
+    <!-- Bootstrap 5 CSS Framework -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Font for clean modern interface text -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Crisp, light off-white background */
+            color: #1e293b; /* Dark slate text for high legibility */
+        }
+        .hero-title {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-custom {
+            background-color: #ffffff; /* Clean white cards */
+            border: 1px solid #e2e8f0; /* Soft light border */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+        .card-custom:hover {
+            transform: translateY(-4px);
+            border-color: #3b82f6;
+            box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.1);
+        }
+        .legal-notice {
+            background-color: #fef2f2; /* Light amber/red notice container */
+            border-left: 4px solid #ef4444;
+        }
+        .footer {
+            background-color: #ffffff;
+            border-top: 1px solid #e2e8f0;
+        }
+    </style>
 </head>
-<body>
-    <!-- Shared Navigation Bar -->
-    <header>
-        <nav>
-            <div class="logo">Forex Mentorship</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="why-forex.html">Why Forex?</a></li>
-                <li><a href="mentorship-program.html" class="active">Mentorship Program</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="d-flex flex-column min-vh-100">
 
-    <!-- Page Content -->
-    <main>
-        <article class="mentorship-program">
-            <section class="why-mentorship-section">
-                <h2>Why Do I Need Mentorship?</h2>
-                <p>There are various possible approaches there to trading in Forex. And there is plenty of information available on the web regarding these approaches. Some are of good quality, and some are poor. It’s very easy to get lost in the silos. A good mentor knows what works and which is the fastest way of achieving high profitability.</p>
-    
-                <p>Basically, there are 2 main approaches to trade forex. One is through Technical Analysis, and the other is through Fundamental Analysis. Technical Analysis is about looking at the price on the chart and marking different points to make a prediction of the price increase or decrease. And Fundamental Analysis is about following external events in the real world that impact the economy and make predictions based on that.</p>
-    
-                <p>Technical analysis is usually the most common approach adopted by retail traders. Because, Fundamental Analysis needs to have economic knowledge and financial academic background. Technical analysis can be done using some indicators or manually using concepts like SMC (Smart Money Concepts).</p>
-    
-                <p>Using indicators is an easier approach to make analysis. Most of the time indicators lag, because they need to see the recent price to make the prediction. By the time it has made a prediction the opportunity to place the trade might be gone. Also, each indicator serves a generic purpose and indicates a simpler aspect of the price movement. So, often there is a need to use multiple indicators which makes the workspace clumsy. Also, generally it’s hard to achieve high profitability using the indicators.</p>
-    
-                <p>The other way of doing technical analysis is using industry standard practice like SMC. SMC helps to understand the underlying reason behind why prices move. The reason prices make bigger moves is because at certain point or time big financial institutes (like banks) place large volumes of orders. There are signs that can be learnt using SMC concepts which help to spot such movements. So, trading along with the institutes increases the chance of the prediction to be right.</p>
-    
-                <p>The SMC concepts are hard to learn, and some knowledge is simply not very available on the internet. So, it is a better and faster approach to learn Forex trading from a mentor. Some people can be profitable without a mentor in about 3 to 5 years if they put their highest effort and of course in a smarter way. But unfortunately, the harsh reality is that around 95% of retail traders never achieve profitability. So, it is highly recommended that you learn from a good mentor.</p>
-
-            </section>
-            <section class="why-expensive-section">
-                <h2>Why is Mentorship Expensive?</h2>
-                <p>Ever wonder why finding a great trading mentor feels almost impossible? It all comes down to a classic timing paradox. An exceptional mentor is a successful, seasoned pro who has spent years mastering the markets. But here is how the typical trading journey actually looks: once a trader figures out how to be consistently profitable, it usually takes about two to three years to hit that first million. After that? Their wealth starts compounding exponentially.</p>
-    
-                <p>Here is the catch:</p>
-                <ul class="benefits-list">
-                    <li><strong>The Early Stage (The Hidden Gem):</strong> During a trader's early profitable years, their massive wins aren't always visible to the public yet. Because they are still navigating the financial hurdles of building wealth, they are often highly motivated to mentor others. They know their strategy works and want to share it. Unfortunately, because the flashy lifestyle isn't there yet, most people hesitate to join and miss out on invaluable guidance.</li>
-                    <li><strong>The Success Stage (The Closed Door):</strong> Once that same trader breaks through and achieves massive financial freedom, everything changes. They want to enjoy the fruits of their labor—not spending their weekends teaching classes. At this point, their time is so incredibly valuable that if they do offer mentorship, the price tag is simply out of reach for most everyday students.</li>
+    <!-- 1. LIGHT-THEMED NAVBAR WITH DROPDOWN MENU -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand text-primary fw-bold" href="index.html">📈 Forex Mentorship</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0fw-semibold">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="why-forex.html">Why Forex?</a>
+                    </li>
+                    <li class="nav-item active text-primary">
+                        <a class="nav-link active text-primary" href="mentorship-program.html">Mentorship Program</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="infoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Company
+                        </a>
+                        <ul class="dropdown-menu shadow" aria-labelledby="infoDropdown">
+                            <li><a class="dropdown-item" href="about.html">About Us</a></li>
+                            <li><a class="dropdown-item" href="contact.html">Contact Info</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item disabled text-muted" href="#">Student Portal (Coming Soon)</a></li>
+                        </ul>
+                    </li>
                 </ul>
-    
-                <p>The takeaway? The best time to learn from a master is right before the rest of the world realizes how good they are.</p>
-            </section>
-            <section class="why-to-expect-section">
-                <h2>What to Expect from the Mentorship Program?</h2>
-                <p>I intended the mentorship program to be a 1-on-1 guidance to pass on the complete knowledge, skill and wisdom that I have achieved so far. I had to spend a tremendous amount of time to learn the SMC concepts. I have watched around 120 hours of high value SMC lesson videos and countless hours of trading related videos, tested around 1000 trades for a period of 6 months of market data, and traded live for 5 months to identify and fix issues with the strategy.</p>
-    
-                <p>A lot has gone into it already and when I mentor someone I want him to put in the least amount of effort to gain that same value. I had to go through trial and error to fix many issues and it’s pointless for someone else to make the same mistake and waste time.</p>
-    
-                <p>I will help with:</p>
-                <ul class="benefits-list">
-                    <li>Learning the concepts</li>
-                    <li>Doing the analysis in Trading View (i.e. doing the chart markings)</li>
-                    <li>Back testing to verify the Trade Plan’s performance</li>
-                    <li>Execute trades real time</li>
-                    <li>Daily market analysis to understand trading opportunities</li>
-                    <li>Review past trades to identify what went wrong and how to fix them</li>
-                    <li>Tracking and analyzing performance</li>
-                    <li>Participating in prop firm challenges</li>
-                    <li>Understand and overcome psychological challenges</li>
-                </ul>
+            </div>
+        </div>
+    </nav>		
 
-            </section>
-            <section class="the-roadmap-section">
-                <h2>The Program Roadmap</h2>
-                <ol class="benefits-list">
-                    <li>Learn (3 months)</li>
-                    <li>Test the Trade Plan (1 month)</li>
-                    <li>Practice (8 months)</li>
-                    <li>Optimize Performance (1 year)</li>
-                </ol>
 
-                <h2>1. Learn:</h2>
-                <h3>Overview:</h3>
-                <ul class="benefits-list">
-                    <li><strong>Topic:</strong> Technical Analysis using SMC concepts</li>
-                    <li><strong>Format:</strong> Online or Physical (1-on-1)</li>
-                    <li><strong>Duration:</strong> 2 hours each week during the weekend, total 12 sessions (24 hours) in 3 months</li>
-                </ul>
+    <!-- 2. MAIN CONTENT AREA (LIGHT THEME) -->
+<main class="container my-5 py-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-9">
+            <article class="mentorship-program">
+                
+                <!-- SECTION 1: WHY DO I NEED MENTORSHIP? -->
+                <section class="why-mentorship-section mb-5">
+                    <div class="text-center mb-4">
+                        <h1 class="display-4 fw-bold text-dark mb-3">Accelerate Your Path With <span class="text-primary">Expert Mentorship</span></h1>
+                        <p class="lead text-muted">Skip years of trial and error by adopting a proven, institutional framework right from the start.</p>
+                    </div>
+                    
+                    <p class="text-secondary">There are various possible approaches there to trading in Forex. And there is plenty of information available on the web regarding these approaches. Some are of good quality, and some are poor. It’s very easy to get lost in the silos. A good mentor knows what works and which is the fastest way of achieving high profitability.</p>
+        
+                    <p class="text-secondary">Basically, there are 2 main approaches to trade forex. One is through Technical Analysis, and the other is through Fundamental Analysis. Technical Analysis is about looking at the price on the chart and marking different points to make a prediction of the price increase or decrease. And Fundamental Analysis is about following external events in the real world that impact the economy and make predictions based on that.</p>
+        
+                    <p class="text-secondary">Technical analysis is usually the most common approach adopted by retail traders. Because, Fundamental Analysis needs to have economic knowledge and financial academic background. Technical analysis can be done using some indicators or manually using concepts like SMC (Smart Money Concepts).</p>
+        
+                    <div class="p-4 bg-light border-start border-primary border-4 rounded-3 my-4 shadow-sm">
+                        <h4 class="h5 fw-bold text-dark mb-2">📊 The Problem with Generic Retail Indicators</h4>
+                        <p class="text-secondary small mb-0">Using indicators is an easier approach to make analysis. Most of the time indicators lag, because they need to see the recent price to make the prediction. By the time it has made a prediction the opportunity to place the trade might be gone. Also, each indicator serves a generic purpose and indicates a simpler aspect of the price movement. So, often there is a need to use multiple indicators which makes the workspace clumsy. Also, generally it’s hard to achieve high profitability using the indicators.</p>
+                    </div>
+        
+                    <p class="text-secondary">The other way of doing technical analysis is using industry standard practice like SMC. SMC helps to understand the underlying reason behind why prices move. The reason prices make bigger moves is because at certain point or time big financial institutes (like banks) place large volumes of orders. There are signs that can be learnt using SMC concepts which help to spot such movements. So, trading along with the institutes increases the chance of the prediction to be right.</p>
+        
+                    <p class="text-secondary mb-0">The SMC concepts are hard to learn, and some knowledge is simply not very available on the internet. So, it is a better and faster approach to learn Forex trading from a mentor. Some people can be profitable without a mentor in about 3 to 5 years if they put their highest effort and of course in a smarter way. But unfortunately, the harsh reality is that around 95% of retail traders never achieve profitability. So, it is highly recommended that you learn from a good mentor.</p>
+                </section>
 
-                <h3>Curriculum:</h3>
-                <ul class="benefits-list">
-                    <li>Intro to Forex</li>
-                    <li>Market Structure</li>
-                    <li>Multi-timeframe Analysis</li>
-                    <li>Institutional Zones</li>
-                    <li>Order blocks & Imbalance</li>
-                    <li>Liquidity & Inducements</li>
-                    <li>Entry Models</li>
-                    <li>Create a trade plan (strategy)</li>
-                    <li>Risk Management</li>
-                    <li>Trading Psychology</li>
-                    <li>Attempting Prop Firm Challenge</li>
-                </ul>
+                <hr class="border-light-subtle my-5">
 
-                <h2>2. Test the Trade Plan:</h2>
-                <ul class="benefits-list">
-                    <li>Back test the trade plan with 100 trades</li>
-                    <li>Track the performance</li>
-                    <li>Review and provide feedback</li>
-                </ul>
+                <!-- SECTION 2: WHY IS MENTORSHIP EXPENSIVE? -->
+                <section class="why-expensive-section mb-5">
+                    <h2 class="h3 fw-bold text-primary mb-3 text-center">Why is Mentorship Expensive?</h2>
+                    <p class="text-secondary text-center mb-4">Ever wonder why finding a great trading mentor feels almost impossible? It all comes down to a classic timing paradox. An exceptional mentor is a successful, seasoned pro who has spent years mastering the markets. But once a trader figures out how to be consistently profitable, it usually takes about two to three years to hit that first million. After that? Their wealth starts compounding exponentially.</p>
+        
+                    <div class="row g-4 my-2">
+                        <!-- Card 1 -->
+                        <div class="col-md-6">
+                            <div class="card bg-white border border-light-subtle shadow-sm h-100 p-4">
+                                <h4 class="h5 fw-bold text-primary mb-2">💎 1. The Early Stage (The Hidden Gem)</h4>
+                                <p class="text-muted small mb-0">During a trader's early profitable years, their massive wins aren't always visible to the public yet. Because they are still navigating the financial hurdles of building wealth, they are often highly motivated to mentor others. They know their strategy works and want to share it. Unfortunately, because the flashy lifestyle isn't there yet, most people hesitate to join and miss out on invaluable guidance.</p>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="col-md-6">
+                            <div class="card bg-white border border-light-subtle shadow-sm h-100 p-4">
+                                <h4 class="h5 fw-bold text-dark mb-2">🔒 2. The Success Stage (The Closed Door)</h4>
+                                <p class="text-muted small mb-0">Once that same trader breaks through and achieves massive financial freedom, everything changes. They want to enjoy the fruits of their labor—not spending their weekends teaching classes. At this point, their time is so incredibly valuable that if they do offer mentorship, the price tag is simply out of reach for most everyday students.</p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <p class="text-center text-primary fw-semibold mt-4 mb-0">💡 The takeaway? The best time to learn from a master is right before the rest of the world realizes how good they are.</p>
+                </section>
 
-                <h2>3. Practice:</h2>
-                <ul class="benefits-list">
-                    <li>Register in a Prop Firm and buy a small funding challenge (10K challenge – cost $100 approx.)</li>
-                    <li>Trade for 8 months</li>
-                    <li>Experience different market conditions and learn to wait patiently for A+ setups</li>
-                </ul>
+                <hr class="border-light-subtle my-5">
 
-                <h2>4. Optimize the Performance:</h2>
-                <ul class="benefits-list">
-                    <li>Improve trading performance even further to increase the win rate</li>
-                    <li>Collaborate with the mentor and other fellow traders to achieve high profitability</li>
-                </ul>
-            </section>
-        </article>
-    </main>
+                <!-- SECTION 3: WHAT TO EXPECT -->
+                <section class="why-to-expect-section mb-5">
+                    <h2 class="h3 fw-bold text-primary mb-3">What to Expect from the Mentorship Program?</h2>
+                    <p class="text-secondary">I intended the mentorship program to be a 1-on-1 guidance to pass on the complete knowledge, skill and wisdom that I have achieved so far. I had to spend a tremendous amount of time to learn the SMC concepts. I have watched around 120 hours of high value SMC lesson videos and countless hours of trading related videos, tested around 1000 trades for a period of 6 months of market data, and traded live for 5 months to identify and fix issues with the strategy.</p>
+        
+                    <p class="text-secondary mb-4">A lot has gone into it already and when I mentor someone I want him to put in the least amount of effort to gain that same value. I had to go through trial and error to fix many issues and it’s pointless for someone else to make the same mistake and waste time.</p>
+        
+                    <h4 class="h5 fw-bold text-dark mb-3">I will help with:</h4>
+                    <div class="row g-2">
+                        <div class="col-md-6"><div class="p-2 border border-light-subtle bg-white rounded shadow-sm text-secondary small">✔️ Learning the concepts</div></div>
+                        <div class="col-md-6"><div class="p-2 border border-light-subtle bg-white rounded shadow-sm text-secondary small">✔️ Doing the analysis in Trading View (chart markings)</div></div>
+                        <div class="col-md-6"><div class="p-2 border border-light-subtle bg-white rounded shadow-sm text-secondary small">✔️ Back testing to verify the Trade Plan’s performance</div></div>
+                        <div class="col-md-6"><div class="p-2 border border-light-subtle bg-white rounded shadow-sm text-secondary small">✔️ Execute trades real time</div></div>
+                        <div class="col-md-6"><div class="p-2 border border-light-subtle bg-white rounded shadow-sm text-secondary small">✔️ Daily market analysis to understand trading opportunities</div></div>
+                        <div class="col-md-6"><div class="p-2 border border-light-subtle bg-white rounded shadow-sm text-secondary small">✔️ Review past trades to identify issues & fixes</div></div>
+                        <div class="col-md-6"><div class="p-2 border border-light-subtle bg-white rounded shadow-sm text-secondary small">✔️ Tracking and analyzing performance</div></div>
+                        <div class="col-md-6"><div class="p-2 border border-light-subtle bg-white rounded shadow-sm text-secondary small">✔️ Participating in prop firm challenges</div></div>
+                        <div class="col-12"><div class="p-2 border border-light-subtle bg-white rounded shadow-sm text-secondary small">✔️ Understand and overcome psychological challenges</div></div>
+                    </div>
+                </section>
 
-    <!-- Shared Footer -->
-    <footer>
-        <p>&copy; 2026 MySite. All rights reserved.</p>
+                <section class="the-roadmap-section mb-4">
+                    <h2 class="h3 fw-bold text-primary mb-4 text-center">The Program Roadmap</h2>
+                    
+                    <div class="row g-3 text-center mb-5">
+                        <div class="col-6 col-md-3">
+                            <div class="p-3 bg-white border border-light-subtle rounded shadow-sm">
+                                <span class="badge bg-primary rounded-circle mb-2">1</span>
+                                <div class="small fw-bold text-dark">Learn</div>
+                                <small class="text-muted">3 Months</small>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="p-3 bg-white border border-light-subtle rounded shadow-sm">
+                                <span class="badge bg-primary rounded-circle mb-2">2</span>
+                                <div class="small fw-bold text-dark">Test Plan</div>
+                                <small class="text-muted">1 Month</small>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="p-3 bg-white border border-light-subtle rounded shadow-sm">
+                                <span class="badge bg-primary rounded-circle mb-2">3</span>
+                                <div class="small fw-bold text-dark">Practice</div>
+                                <small class="text-muted">8 Months</small>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="p-3 bg-white border border-light-subtle rounded shadow-sm">
+                                <span class="badge bg-primary rounded-circle mb-2">4</span>
+                                <div class="small fw-bold text-dark">Optimize</div>
+                                <small class="text-muted">1 Year</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card bg-white border border-light-subtle p-4 mb-4 shadow-sm">
+                        <h3 class="h4 fw-bold text-dark mb-3"><span class="text-primary">1.</span> Learn (3 Months)</h3>
+                        <div class="row g-3 bg-light p-3 rounded mb-3 small text-secondary">
+                            <div class="col-sm-4"><strong>Topic:</strong> Technical Analysis using SMC concepts</div>
+                            <div class="col-sm-4"><strong>Format:</strong> Online or Physical (1-on-1)</div>
+                            <div class="col-sm-4"><strong>Duration:</strong> 2 hours/weekend (12 sessions / 24 hours total)</div>
+                        </div>
+                        <h4 class="h6 fw-bold text-uppercase text-muted tracking-wider mb-2">Curriculum Breakdown:</h4>
+                        <div class="row g-2 text-secondary small">
+                            <div class="col-md-6">• Intro to Forex</div>
+                            <div class="col-md-6">• Market Structure</div>
+                            <div class="col-md-6">• Multi-timeframe Analysis</div>
+                            <div class="col-md-6">• Institutional Zones</div>
+                            <div class="col-md-6">• Order blocks & Imbalance</div>
+                            <div class="col-md-6">• Liquidity & Inducements</div>
+                            <div class="col-md-6">• Entry Models</div>
+                            <div class="col-md-6">• Create a trade plan (strategy)</div>
+                            <div class="col-md-6">• Risk Management</div>
+                            <div class="col-md-6">• Trading Psychology</div>
+                            <div class="col-12">• Attempting Prop Firm Challenge</div>
+                        </div>
+                    </div>
+
+                    <div class="card bg-white border border-light-subtle p-4 mb-4 shadow-sm">
+                        <h3 class="h4 fw-bold text-dark mb-3"><span class="text-primary">2.</span> Test the Trade Plan (1 Month)</h3>
+                        <ul class="text-secondary small mb-0 ps-3">
+                            <li class="mb-1">Back test the trade plan with 100 trades.</li>
+                            <li class="mb-1">Track the execution metrics and overall performance.</li>
+                            <li class="mb-0">Comprehensive review sessions and direct strategic feedback.</li>
+                        </ul>
+                    </div>
+
+                    <div class="card bg-white border border-light-subtle p-4 mb-4 shadow-sm">
+                        <h3 class="h4 fw-bold text-dark mb-3"><span class="text-primary">3.</span> Practice (8 Months)</h3>
+                        <ul class="text-secondary small mb-0 ps-3">
+                            <li class="mb-2">Register in a Prop Firm and buy a small funding challenge (10K challenge – cost $100 approx.).</li>
+                            <li class="mb-2">Trade actively across an 8-month tracking phase.</li>
+                            <li class="mb-0">Experience different live market conditions and learn to wait patiently for A+ setups.</li>
+                        </ul>
+                    </div>
+
+                    <div class="card bg-white border border-light-subtle p-4 mb-0 shadow-sm">
+                        <h3 class="h4 fw-bold text-dark mb-3"><span class="text-primary">4.</span> Optimize the Performance (1 Year)</h3>
+                        <ul class="text-secondary small mb-0 ps-3">
+                            <li class="mb-2">Improve trading performance even further to increase the system win rate.</li>
+                            <li class="mb-0">Collaborate directly with the mentor and fellow program traders to achieve peak long-term profitability.</li>
+                        </ul>
+                    </div>
+                </section>
+
+            </article>
+        </div>
+    </div>
+</main>
+
+<!-- 3. FOOTER SECTION -->
+    <footer class="footer py-4 text-center mt-auto">
+        <div class="container">
+            <p class="text-muted small mb-0">&copy; 2026 MySite. All rights reserved.</p>
+        </div>
     </footer>
+
+    <!-- Include Bootstrap 5 JavaScript Bundle (Crucial for dropdown & toggle functionality) -->
+    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
