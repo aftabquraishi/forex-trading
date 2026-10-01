@@ -9,6 +9,27 @@
     <!-- Google Font for clean modern interface text -->
     <link href="https://googleapis.com" rel="stylesheet">
     <style>
+
+/* Responsive Logo Constraints */
+  .logo-link {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .site-logo {
+    display: block;
+    /* Controls the height on desktop so the horizontal format looks clean */
+    height: 120px; 
+    width: auto; /* Keeps the aspect ratio perfectly intact */
+    object-fit: contain;
+    transition: transform 0.2s ease;
+  }
+
+  /* Optional hover effect */
+  .logo-link:hover .site-logo {
+    transform: scale(1.02);
+  }
+
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f8fafc; /* Crisp, light off-white background */
@@ -45,7 +66,12 @@
     <!-- 1. LIGHT-THEMED NAVBAR WITH DROPDOWN MENU -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand text-primary fw-bold" href="index.html">📈 FxMentorBD</a>
+
+            <!-- Logo Section -->
+            <a href="index.html" class="logo-link" aria-label="FxMentorBD Home">
+                <img src="img/logo-small.jpg" alt="FxMentorBD - Forex Trading Mentorship Logo" class="site-logo">
+            </a>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
