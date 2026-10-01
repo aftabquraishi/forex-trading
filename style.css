@@ -145,3 +145,10 @@ code {
     margin-top: 0.5rem;
     list-style-type: circle;
 }
+
+/********* Mentorship page style **********/
+
+/* Custom Content Styles */
+.mentorship-program section {
+    margin-bottom: 2.5rem;
+}
