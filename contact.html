@@ -3,34 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forex Mentorship Program - Contact</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <!-- Shared Navigation Bar -->
-    <header>
-        <nav>
-            <div class="logo">Forex Mentorship</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="why-forex.html">Why Forex?</a></li>
-                <li><a href="mentorship-program.html">Mentorship Program</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <title>Forex Mentorship Program - Contact Info</title>
+    <!-- Bootstrap 5 CSS Framework -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Font for clean modern interface text -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <style>
 
-    <!-- Page Content -->
-    <main>
-        <article class="forex-guide">
-            
-        </article>
+/* Responsive Logo Constraints */
+  .logo-link {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .site-logo {
+    display: block;
+    /* Controls the height on desktop so the horizontal format looks clean */
+    height: 60px; 
+    width: auto; /* Keeps the aspect ratio perfectly intact */
+    object-fit: contain;
+    transition: transform 0.2s ease;
+  }
+
+  /* Optional hover effect */
+  .logo-link:hover .site-logo {
+    transform: scale(1.02);
+  }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Crisp, light off-white background */
+            color: #1e293b; /* Dark slate text for high legibility */
+        }
+        .hero-title {
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-custom {
+            background-color: #ffffff; /* Clean white cards */
+            border: 1px solid #e2e8f0; /* Soft light border */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+        .card-custom:hover {
+            transform: translateY(-4px);
+            border-color: #3b82f6;
+            box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.1);
+        }
+        .legal-notice {
+            background-color: #fef2f2; /* Light amber/red notice container */
+            border-left: 4px solid #ef4444;
+        }
+        .footer {
+            background-color: #ffffff;
+            border-top: 1px solid #e2e8f0;
+        }
+    </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    <!-- 1. LIGHT-THEMED NAVBAR WITH DROPDOWN MENU -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+
+            <!-- Logo Section -->
+            <a href="index.html" class="logo-link" aria-label="FxMentorBD Home">
+                <img src="img/logo-small.jpg" alt="FxMentorBD - Forex Trading Mentorship Logo" class="site-logo">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0fw-semibold">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="why-forex.html">Why Forex?</a>
+                    </li>
+                    <li class="nav-item active text-primary">
+                        <a class="nav-link" href="mentorship.html">Mentorship Program</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="infoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Company
+                        </a>
+                        <ul class="dropdown-menu shadow" aria-labelledby="infoDropdown">
+                            <li><a class="dropdown-item" href="about.html">About Me</a></li>
+                            <li><a class="dropdown-item active bg-primary" href="contact.html">Contact Info</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item disabled text-muted" href="#">Student Portal (Coming Soon)</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. MAIN CONTENT AREA (LIGHT THEME) -->
+    <main class="container my-5 py-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                
+                <!-- PAGE HEADER TITLE SECTION -->
+                <div class="text-center mb-5">
+                    <h1 class="display-4 fw-bold text-dark mb-3">Get in <span class="text-primary">Touch</span></h1>
+                    <p class="lead text-muted mx-auto" style="max-width: 600px;">Have questions about the Forex Mentorship Program? Reach out directly via email, WhatsApp, or through the contact form below.</p>
+                </div>
+
+                <div class="row g-5">
+                    <!-- LEFT COLUMN: DIRECT CONTACT DETAILS -->
+                    <div class="col-md-5">
+                        <h2 class="h4 fw-bold text-dark mb-4">Direct Communication</h2>
+                        
+                        <!-- WhatsApp Link Grid Card -->
+                        <div class="card card-custom p-4 mb-4 text-decoration-none d-block">
+                            <div class="d-flex align-items-center">
+                                <div class="fs-2 me-3">💬</div>
+                                <div>
+                                    <h4 class="h6 fw-bold text-dark mb-1">WhatsApp</h4>
+                                    <a href="https://wa.me" target="_blank" class="text-primary text-decoration-none fw-semibold small">+88 01735 351597</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Email Card Context -->
+                        <div class="card card-custom p-4 mb-4">
+                            <div class="d-flex align-items-center">
+                                <div class="fs-2 me-3">✉️</div>
+                                <div>
+                                    <h4 class="h6 fw-bold text-dark mb-1">Email Address</h4>
+                                    <a href="mailto:aftab.net@gmail.com" class="text-primary text-decoration-none fw-semibold small">aftab.net@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Availability Badge -->
+                        <div class="p-3 bg-light border border-light-subtle rounded-3 mt-4">
+                            <p class="text-muted small mb-0"><strong>Response Time:</strong> I typically reply within 24 hours during trading week sessions (Monday through Friday).</p>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT COLUMN: INTERACTIVE FORM LAYOUT -->
+                    <div class="col-md-7">
+                        <div class="p-4 p-sm-5 bg-white border border-light-subtle rounded-4 shadow">
+                            <h3 class="h4 fw-bold text-dark mb-3">Send a Message</h3>
+                            <p class="text-muted small mb-4">Fill out this quick form and I will get back to you with the application criteria details.</p>
+                            
+                            <!-- Static Input Web Form -->
+                            <form action="#" method="POST">
+                                <div class="mb-3">
+                                    <label for="studentName" class="form-label small fw-semibold text-dark">Your Name</label>
+                                    <input type="text" class="form-control bg-light border-light-subtle" id="studentName" placeholder="John Doe" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="studentEmail" class="form-label small fw-semibold text-dark">Email Address</label>
+                                    <input type="email" class="form-control bg-light border-light-subtle" id="studentEmail" placeholder="name@example.com" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="messageSubject" class="form-label small fw-semibold text-dark">Subject</label>
+                                    <input type="text" class="form-control bg-light border-light-subtle" id="messageSubject" placeholder="Inquiry about Mentorship Batch" required>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="messageContent" class="form-label small fw-semibold text-dark">Message Details</label>
+                                    <textarea class="form-control bg-light border-light-subtle" id="messageContent" rows="5" placeholder="Tell me briefly about your current level of experience with trading..." required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100 py-2 fw-semibold shadow-sm">Submit Form</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </main>
 
-    <!-- Shared Footer -->
-    <footer>
-        <p>&copy; 2026 MySite. All rights reserved.</p>
+    <footer class="footer py-4 text-center mt-auto">
+        <div class="container">
+            <p class="text-muted small mb-0">&copy; 2026 FxMentorBD. All rights reserved.</p>
+        </div>
     </footer>
+
+    <!-- Include Bootstrap 5 JavaScript Bundle -->
+    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
