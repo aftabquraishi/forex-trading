@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,58 +10,69 @@
     <!-- Google Font for clean modern interface text -->
     <link href="https://googleapis.com" rel="stylesheet">
     <style>
+        /* Responsive Logo Constraints */
+        .logo-link {
+            display: inline-flex;
+            align-items: center;
+        }
 
-/* Responsive Logo Constraints */
-  .logo-link {
-    display: inline-flex;
-    align-items: center;
-  }
+        .site-logo {
+            display: block;
+            /* Controls the height on desktop so the horizontal format looks clean */
+            height: 60px;
+            width: auto;
+            /* Keeps the aspect ratio perfectly intact */
+            object-fit: contain;
+            transition: transform 0.2s ease;
+        }
 
-  .site-logo {
-    display: block;
-    /* Controls the height on desktop so the horizontal format looks clean */
-    height: 60px; 
-    width: auto; /* Keeps the aspect ratio perfectly intact */
-    object-fit: contain;
-    transition: transform 0.2s ease;
-  }
-
-  /* Optional hover effect */
-  .logo-link:hover .site-logo {
-    transform: scale(1.02);
-  }
+        /* Optional hover effect */
+        .logo-link:hover .site-logo {
+            transform: scale(1.02);
+        }
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8fafc; /* Crisp, light off-white background */
-            color: #1e293b; /* Dark slate text for high legibility */
+            background-color: #f8fafc;
+            /* Crisp, light off-white background */
+            color: #1e293b;
+            /* Dark slate text for high legibility */
         }
+
         .hero-title {
             background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
         .card-custom {
-            background-color: #ffffff; /* Clean white cards */
-            border: 1px solid #e2e8f0; /* Soft light border */
+            background-color: #ffffff;
+            /* Clean white cards */
+            border: 1px solid #e2e8f0;
+            /* Soft light border */
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
             transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
         }
+
         .card-custom:hover {
             transform: translateY(-4px);
             border-color: #3b82f6;
             box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.1);
         }
+
         .legal-notice {
-            background-color: #fef2f2; /* Light amber/red notice container */
+            background-color: #fef2f2;
+            /* Light amber/red notice container */
             border-left: 4px solid #ef4444;
         }
+
         .footer {
             background-color: #ffffff;
             border-top: 1px solid #e2e8f0;
         }
     </style>
 </head>
+
 <body class="d-flex flex-column min-vh-100">
 
     <!-- 1. LIGHT-THEMED NAVBAR WITH DROPDOWN MENU -->
@@ -72,7 +84,8 @@
                 <img src="img/logo-small.jpg" alt="FxMentorBD - Forex Trading Mentorship Logo" class="site-logo">
             </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="mainNavbar">
@@ -87,14 +100,18 @@
                         <a class="nav-link" href="mentorship.html">Mentorship Program</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="infoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="infoDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             Company
                         </a>
                         <ul class="dropdown-menu shadow" aria-labelledby="infoDropdown">
                             <li><a class="dropdown-item active bg-primary" href="about.html">About Me</a></li>
                             <li><a class="dropdown-item" href="contact.html">Contact Info</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item disabled text-muted" href="#">Student Portal (Coming Soon)</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item disabled text-muted" href="#">Student Portal (Coming Soon)</a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -107,26 +124,43 @@
         <div class="row justify-content-center">
             <div class="col-lg-9">
                 <article class="about-me-page">
-                    
+
                     <!-- PAGE HEADER TITLE SECTION -->
                     <div class="text-center mb-5">
-                        <h1 class="display-4 fw-bold text-dark mb-3">About <span class="text-primary">Aftab Quraishi</span></h1>
-                        <p class="lead text-muted mx-auto" style="max-width: 720px;">From software engineering at top multinational corporations to scaling funded institutional trading systems full-time.</p>
+                        <h1 class="display-4 fw-bold text-dark mb-3">About <span class="text-primary">Aftab
+                                Quraishi</span></h1>
+                        <p class="lead text-muted mx-auto" style="max-width: 720px;">From software engineering at top
+                            multinational corporations to scaling funded institutional trading systems full-time.</p>
                     </div>
 
                     <!-- SECTION 1: ABOUT ME & BACKGROUND -->
                     <section class="intro-section mb-5">
                         <h2 class="h3 fw-bold text-primary mb-3">My Background</h2>
-                        <p class="text-secondary">My name is <strong>Aftab Quraishi</strong>. I am currently based in Bangladesh. I started my career as a software engineer and worked in the software industry for more than 20 years. Most of the time I worked in top MNC software companies in Bangladesh which are headquartered in the US.</p>
-                        
-                        <p class="text-secondary">Pay was always good compared to any other job. But a lifelong career as an employee is not very attractive, whether I lived in Bangladesh or moved abroad. The pay is mostly according to the local market living standard. It’s possible to afford an upper-middle-class living standard, but it is difficult to develop financial security. Growth is only 5% to 10% per year, which makes it difficult to cope with the ever-increasing cost of living.</p>
-                        
-                        <p class="text-secondary">It’s quite possible to build wealth through a software career if someone takes a path of innovation and entrepreneurship. But again, that requires deep passion, desperate dedication, and a very long time. Also, working as an employee is about a lifetime of working in a 9-to-5 job. If someone has a priority for a balanced life, working 8 hours per day would feel very frustrating.</p>
+                        <p class="text-secondary">My name is <strong>Aftab Quraishi</strong>. I am currently based in
+                            Bangladesh. I started my career as a software engineer and worked in the software industry
+                            for more than 20 years. Most of the time I worked in top MNC software companies in
+                            Bangladesh which are headquartered in the US.</p>
+
+                        <p class="text-secondary">Pay was always good compared to any other job. But a lifelong career
+                            as an employee is not very attractive, whether I lived in Bangladesh or moved abroad. The
+                            pay is mostly according to the local market living standard. It’s possible to afford an
+                            upper-middle-class living standard, but it is difficult to develop financial security.
+                            Growth is only 5% to 10% per year, which makes it difficult to cope with the ever-increasing
+                            cost of living.</p>
+
+                        <p class="text-secondary">It’s quite possible to build wealth through a software career if
+                            someone takes a path of innovation and entrepreneurship. But again, that requires deep
+                            passion, desperate dedication, and a very long time. Also, working as an employee is about a
+                            lifetime of working in a 9-to-5 job. If someone has a priority for a balanced life, working
+                            8 hours per day would feel very frustrating.</p>
 
                         <!-- Highlight Callout Panel -->
                         <div class="p-4 bg-primary bg-opacity-10 border-start border-primary border-4 rounded-3 my-4">
                             <h4 class="h5 fw-bold text-primary mb-2">🔄 The Career Shift</h4>
-                            <p class="text-secondary mb-0">I started to desperately look for an alternative. During August 2025, I got to know about Forex through a friend. Realizing the true potential of Forex, I decided to switch my career to Forex trading. I was very lucky to find a very good mentor, so I got the courage to jump into Forex trading full-time.</p>
+                            <p class="text-secondary mb-0">I started to desperately look for an alternative. During
+                                August 2025, I got to know about Forex through a friend. Realizing the true potential of
+                                Forex, I decided to switch my career to Forex trading. I was very lucky to find a very
+                                good mentor, so I got the courage to jump into Forex trading full-time.</p>
                         </div>
                     </section>
 
@@ -135,9 +169,14 @@
                     <!-- SECTION 2: MY JOURNEY WITH FOREX -->
                     <section class="journey-section mb-5">
                         <h2 class="h3 fw-bold text-primary mb-3">My Journey with Forex</h2>
-                        <p class="text-secondary">I spent 2 months learning SMC concepts, 2 months backtesting the strategy (about 1000 trades in 8 months of past data), 2 months demo trading, and now it’s been 4 months of live trading in a 200K funding challenge.</p>
-            
-                        <p class="text-secondary">Trading evolved over time, during all phases—backtesting, demo trading, and live trading. Strategy shaped over time. Initially, I took more trades, and gradually increased focus on high-quality setups. It’s still evolving because market conditions change every month. Experience is the key to mastering the market.</p>
+                        <p class="text-secondary">I spent 2 months learning SMC concepts, 2 months backtesting the
+                            strategy (about 1000 trades in 8 months of past data), 2 months demo trading, and now it’s
+                            been 4 months of live trading in a 200K funding challenge.</p>
+
+                        <p class="text-secondary">Trading evolved over time, during all phases—backtesting, demo
+                            trading, and live trading. Strategy shaped over time. Initially, I took more trades, and
+                            gradually increased focus on high-quality setups. It’s still evolving because market
+                            conditions change every month. Experience is the key to mastering the market.</p>
 
                         <!-- Live Metrics Performance Grid -->
                         <h4 class="h5 fw-bold text-dark mt-4 mb-3">Trading Performance Metrics & Projections</h4>
@@ -145,33 +184,41 @@
                             <div class="col-md-6 col-lg-3">
                                 <div class="p-3 rounded bg-white border border-light-subtle shadow-sm card-custom">
                                     <div class="display-6 fw-bold text-dark">30%</div>
-                                    <small class="text-muted text-uppercase tracking-wider fw-semibold">Current Win Rate</small>
+                                    <small class="text-muted text-uppercase tracking-wider fw-semibold">Current Win
+                                        Rate</small>
                                 </div>
                             </div>
                             <div class="col-md-6 col-lg-3">
                                 <div class="p-3 rounded bg-white border border-light-subtle shadow-sm card-custom">
                                     <div class="display-6 fw-bold text-primary">+5R</div>
-                                    <small class="text-muted text-uppercase tracking-wider fw-semibold">Average Profit</small>
+                                    <small class="text-muted text-uppercase tracking-wider fw-semibold">Average
+                                        Profit</small>
                                 </div>
                             </div>
                             <div class="col-md-6 col-lg-3">
                                 <div class="p-3 rounded bg-white border border-light-subtle shadow-sm card-custom">
                                     <div class="display-6 fw-bold text-success">$5K</div>
-                                    <small class="text-muted text-uppercase tracking-wider fw-semibold">Avg. Monthly USD</small>
+                                    <small class="text-muted text-uppercase tracking-wider fw-semibold">Avg. Monthly
+                                        USD</small>
                                 </div>
                             </div>
                             <div class="col-md-6 col-lg-3">
                                 <div class="p-3 rounded bg-white border border-light-subtle shadow-sm card-custom">
                                     <div class="display-6 fw-bold text-info">40-50%</div>
-                                    <small class="text-muted text-uppercase tracking-wider fw-semibold">Projected Win Rate</small>
+                                    <small class="text-muted text-uppercase tracking-wider fw-semibold">Projected Win
+                                        Rate</small>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Technical Footnote -->
                         <div class="card bg-white border border-light-subtle p-4 mt-4 shadow-sm">
-                            <p class="text-secondary small mb-2">With a $200K funded account, it is possible to make around $5K USD per month on an average with this performance while risking a conservative 0.5% per trade.</p>
-                            <p class="text-secondary small mb-0">With more experience in the live market (another 6 to 8 months), it will be possible to risk 1% per trade. With time, the win rate is expected to grow to 40% to 50%, which may take a year or two.</p>
+                            <p class="text-secondary small mb-2">With a $200K funded account, it is possible to make
+                                around $5K USD per month on an average with this performance while risking a
+                                conservative 0.5% per trade.</p>
+                            <p class="text-secondary small mb-0">With more experience in the live market (another 6 to 8
+                                months), it will be possible to risk 1% per trade. With time, the win rate is expected
+                                to grow to 40% to 50%, which may take a year or two.</p>
                         </div>
                     </section>
 
@@ -189,4 +236,5 @@
     <!-- Include Bootstrap 5 JavaScript Bundle -->
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

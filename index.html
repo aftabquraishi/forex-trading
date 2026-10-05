@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,47 +10,51 @@
     <!-- Google Font for professional look -->
     <link href="https://googleapis.com" rel="stylesheet">
     <style>
+        /* Responsive Logo Constraints */
+        .logo-link {
+            display: inline-flex;
+            align-items: center;
+        }
 
-/* Responsive Logo Constraints */
-  .logo-link {
-    display: inline-flex;
-    align-items: center;
-  }
+        .site-logo {
+            display: block;
+            /* Controls the height on desktop so the horizontal format looks clean */
+            height: 60px;
+            width: auto;
+            /* Keeps the aspect ratio perfectly intact */
+            object-fit: contain;
+            transition: transform 0.2s ease;
+        }
 
-  .site-logo {
-    display: block;
-    /* Controls the height on desktop so the horizontal format looks clean */
-    height: 60px; 
-    width: auto; /* Keeps the aspect ratio perfectly intact */
-    object-fit: contain;
-    transition: transform 0.2s ease;
-  }
-
-  /* Optional hover effect */
-  .logo-link:hover .site-logo {
-    transform: scale(1.02);
-  }
+        /* Optional hover effect */
+        .logo-link:hover .site-logo {
+            transform: scale(1.02);
+        }
 
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f8fafc;
             color: #1e293b;
         }
+
         .hero-section {
             background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
             padding: 100px 0;
             border-bottom: 1px solid #374151;
         }
+
         .navbar-brand {
             font-weight: 700;
             letter-spacing: 0.5px;
         }
+
         .footer {
             border-top: 1px solid #2d3748;
             background-color: #f8fafc;
         }
     </style>
 </head>
+
 <body>
 
     <!-- 1. LIGHT-THEMED NAVBAR WITH DROPDOWN MENU -->
@@ -61,7 +66,8 @@
                 <img src="img/logo-small.jpg" alt="FxMentorBD - Forex Trading Mentorship Logo" class="site-logo">
             </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="mainNavbar">
@@ -76,14 +82,18 @@
                         <a class="nav-link" href="mentorship.html">Mentorship Program</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="infoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="infoDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             Company
                         </a>
                         <ul class="dropdown-menu shadow" aria-labelledby="infoDropdown">
                             <li><a class="dropdown-item" href="about.html">About Me</a></li>
                             <li><a class="dropdown-item" href="contact.html">Contact Info</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item disabled text-muted" href="#">Student Portal (Coming Soon)</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item disabled text-muted" href="#">Student Portal (Coming Soon)</a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -92,37 +102,44 @@
     </nav>
 
     <!-- 2. BOOTSTRAP HERO SECTION (LIGHT THEME) -->
-    <header class="hero-section py-5 text-center text-lg-start" style="background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%); border-bottom: 1px solid #cbd5e1;">
+    <header class="hero-section py-5 text-center text-lg-start"
+        style="background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%); border-bottom: 1px solid #cbd5e1;">
         <div class="container py-4">
             <div class="row align-items-center g-5">
                 <div class="col-lg-7">
-    <span class="badge bg-primary px-3 py-2 rounded-pill mb-3">Logic Over Hype • Data Over Guesswork</span>
-    <h1 class="display-4 fw-bold text-dark mb-3">Engineered Forex Mentorship</h1>
-    <p class="lead text-muted mb-4">Stop gambling on lagging indicators. Learn how a 20-year software engineering veteran reverse-engineered institutional Smart Money Concepts (SMC) to pass a $200K prop firm challenge using absolute risk discipline.</p>
-    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-lg-start">
-        <a href="contact.html" class="btn btn-primary btn-lg px-4 me-sm-3 shadow-sm">Apply for 1-on-1 Mentorship</a>
-        <a href="mentorship.html" class="btn btn-outline-primary btn-lg px-4">View the 4-Step Roadmap</a>
-    </div>
-</div>
+                    <span class="badge bg-primary px-3 py-2 rounded-pill mb-3">Logic Over Hype • Data Over
+                        Guesswork</span>
+                    <h1 class="display-4 fw-bold text-dark mb-3">Engineered Forex Mentorship</h1>
+                    <p class="lead text-muted mb-4">Stop gambling on lagging indicators. Learn how a 20-year software
+                        engineering veteran reverse-engineered institutional Smart Money Concepts (SMC) to pass a $200K
+                        prop firm challenge using absolute risk discipline.</p>
+                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-lg-start">
+                        <a href="contact.html" class="btn btn-primary btn-lg px-4 me-sm-3 shadow-sm">Apply for 1-on-1
+                            Mentorship</a>
+                        <a href="mentorship.html" class="btn btn-outline-primary btn-lg px-4">View the 4-Step
+                            Roadmap</a>
+                    </div>
+                </div>
 
 
                 <div class="col-lg-5 text-center">
                     <!-- Modernized light container dashboard panel -->
                     <div class="bg-white p-5 rounded-4 border border-light-subtle shadow text-start">
-    <div class="display-3 text-primary mb-3">🏢</div>
-    <h3 class="h4 text-dark fw-bold mb-2">The $200,000 Milestone</h3>
-    <p class="text-muted small mb-3">Stop trading micro-retail accounts. Learn the risk models required to command deep institutional capital pools safely.</p>
-    <div class="p-3 bg-light rounded-3 border border-light-subtle">
-        <div class="d-flex justify-content-between mb-1">
-            <span class="small fw-semibold text-secondary">Target Capital Access:</span>
-            <span class="small fw-bold text-dark">$200,000 USD</span>
-        </div>
-        <div class="d-flex justify-content-between">
-            <span class="small fw-semibold text-secondary">Bangladesh Compliance:</span>
-            <span class="small fw-bold text-success">100% Simulated Path</span>
-        </div>
-    </div>
-</div>
+                        <div class="display-3 text-primary mb-3">🏢</div>
+                        <h3 class="h4 text-dark fw-bold mb-2">The $200,000 Milestone</h3>
+                        <p class="text-muted small mb-3">Stop trading micro-retail accounts. Learn the risk models
+                            required to command deep institutional capital pools safely.</p>
+                        <div class="p-3 bg-light rounded-3 border border-light-subtle">
+                            <div class="d-flex justify-content-between mb-1">
+                                <span class="small fw-semibold text-secondary">Target Capital Access:</span>
+                                <span class="small fw-bold text-dark">$200,000 USD</span>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span class="small fw-semibold text-secondary">Bangladesh Compliance:</span>
+                                <span class="small fw-bold text-success">100% Simulated Path</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
 
@@ -131,61 +148,75 @@
     </header>
 
     <section class="py-5 bg-white border-bottom border-light-subtle">
-    <div class="container">
-        <div class="row align-items-center g-4">
-            <div class="col-md-4 text-center text-md-start">
-                <h3 class="h2 fw-bold text-dark">Meet Your Mentor</h3>
-                <p class="text-primary fw-semibold mb-0">Aftab Quraishi</p>
-                <small class="text-muted">Ex-MNC Software Architect turned Trader</small>
-            </div>
-            <div class="col-md-8">
-                <p class="text-secondary mb-0">"After 20 years coding systems for top U.S.-headquartered corporations, I walked away from the 9-to-5 treadmill. Why? Because the markets are ultimately complex algorithms. I applied the exact data-validation, backtesting, and logic rules I used in tech to capture consistent +5R targets. I don't sell 'signals'—I build independent trading engineers."</p>
-                <a href="about.html" class="btn btn-link text-primary p-0 mt-2 fw-semibold text-decoration-none">Read My Full Journey →</a>
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-md-4 text-center text-md-start">
+                    <h3 class="h2 fw-bold text-dark">Meet Your Mentor</h3>
+                    <p class="text-primary fw-semibold mb-0">Aftab Quraishi</p>
+                    <small class="text-muted">Ex-MNC Software Architect turned Trader</small>
+                </div>
+                <div class="col-md-8">
+                    <p class="text-secondary mb-0">"After 20 years coding systems for top U.S.-headquartered
+                        corporations, I walked away from the 9-to-5 treadmill. Why? Because the markets are ultimately
+                        complex algorithms. I applied the exact data-validation, backtesting, and logic rules I used in
+                        tech to capture consistent +5R targets. I don't sell 'signals'—I build independent trading
+                        engineers."</p>
+                    <a href="about.html"
+                        class="btn btn-link text-primary p-0 mt-2 fw-semibold text-decoration-none">Read My Full Journey
+                        →</a>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- HOUSING THE CORE REASONING -->
-<section class="py-5">
-    <div class="container text-center">
-        <h2 class="h3 fw-bold text-dark mb-5">Built for Analytical Minds</h2>
-        <div class="row g-4 text-start">
-            <!-- Pillar 1 -->
-            <div class="col-md-4">
-                <div class="p-4 rounded bg-white border border-light-subtle shadow-sm h-100">
-                    <div class="fs-1 text-primary mb-2">🧬</div>
-                    <h4 class="h5 fw-bold text-dark">Algorithm-Based SMC</h4>
-                    <p class="text-muted small mb-0">We don't draw random trendlines. We map algorithmic price data to track institutional bank orders, liquidity sweeps, and order blocks.</p>
+    <section class="py-5">
+        <div class="container text-center">
+            <h2 class="h3 fw-bold text-dark mb-5">Built for Analytical Minds</h2>
+            <div class="row g-4 text-start">
+                <!-- Pillar 1 -->
+                <div class="col-md-4">
+                    <div class="p-4 rounded bg-white border border-light-subtle shadow-sm h-100">
+                        <div class="fs-1 text-primary mb-2">🧬</div>
+                        <h4 class="h5 fw-bold text-dark">Algorithm-Based SMC</h4>
+                        <p class="text-muted small mb-0">We don't draw random trendlines. We map algorithmic price data
+                            to track institutional bank orders, liquidity sweeps, and order blocks.</p>
+                    </div>
                 </div>
-            </div>
-            <!-- Pillar 2 -->
-            <div class="col-md-4">
-                <div class="p-4 rounded bg-white border border-light-subtle shadow-sm h-100">
-                    <div class="fs-1 text-primary mb-2">📊</div>
-                    <h4 class="h5 fw-bold text-dark">1,000+ Trade Backtesting</h4>
-                    <p class="text-muted small mb-0">You won't risk real funds blindly. You will learn to validate your strategy across 8+ months of past data to prove metrics mathematically before launching live assets.</p>
+                <!-- Pillar 2 -->
+                <div class="col-md-4">
+                    <div class="p-4 rounded bg-white border border-light-subtle shadow-sm h-100">
+                        <div class="fs-1 text-primary mb-2">📊</div>
+                        <h4 class="h5 fw-bold text-dark">1,000+ Trade Backtesting</h4>
+                        <p class="text-muted small mb-0">You won't risk real funds blindly. You will learn to validate
+                            your strategy across 8+ months of past data to prove metrics mathematically before launching
+                            live assets.</p>
+                    </div>
                 </div>
-            </div>
-            <!-- Pillar 3 -->
-            <div class="col-md-4">
-                <div class="p-4 rounded bg-white border border-light-subtle shadow-sm h-100">
-                    <div class="fs-1 text-primary mb-2">🏢</div>
-                    <h4 class="h5 fw-bold text-dark">Prop Firm Scaling Path</h4>
-                    <p class="text-muted small mb-0">Completely legal, capital-compliant structure for traders in Bangladesh. Zero personal outflow risk—we train you specifically to pass $100K–$200K institutional funding evaluations.</p>
+                <!-- Pillar 3 -->
+                <div class="col-md-4">
+                    <div class="p-4 rounded bg-white border border-light-subtle shadow-sm h-100">
+                        <div class="fs-1 text-primary mb-2">🏢</div>
+                        <h4 class="h5 fw-bold text-dark">Prop Firm Scaling Path</h4>
+                        <p class="text-muted small mb-0">Completely legal, capital-compliant structure for traders in
+                            Bangladesh. Zero personal outflow risk—we train you specifically to pass $100K–$200K
+                            institutional funding evaluations.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-    <section class="py-5 text-center text-white rounded-4 my-5 mx-3 shadow" style="background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);">
-    <div class="container py-3">
-        <h2 class="h3 fw-bold mb-3">Ready to Transition to Full-Time Independence?</h2>
-        <p class="mx-auto mb-4 opacity-75" style="max-width: 600px;">Mentorship is strictly 1-on-1 to preserve training quality. Applications are vetted to ensure student dedication benchmarks are met.</p>
-        <a href="contact.html" class="btn btn-light btn-lg px-5 py-2 fw-bold text-primary shadow-sm">Submit Your Application</a>
-    </div>
-</section>
+    <section class="py-5 text-center text-white rounded-4 my-5 mx-3 shadow"
+        style="background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);">
+        <div class="container py-3">
+            <h2 class="h3 fw-bold mb-3">Ready to Transition to Full-Time Independence?</h2>
+            <p class="mx-auto mb-4 opacity-75" style="max-width: 600px;">Mentorship is strictly 1-on-1 to preserve
+                training quality. Applications are vetted to ensure student dedication benchmarks are met.</p>
+            <a href="contact.html" class="btn btn-light btn-lg px-5 py-2 fw-bold text-primary shadow-sm">Submit Your
+                Application</a>
+        </div>
+    </section>
 
     <!-- 3. FOOTER SECTION -->
     <footer class="footer py-4 text-center mt-auto">
@@ -197,4 +228,5 @@
     <!-- Include Bootstrap 5 JavaScript Bundle (Crucial for dropdown & toggle functionality) -->
     <script src="js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
